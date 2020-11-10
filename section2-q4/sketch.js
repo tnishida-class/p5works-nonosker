@@ -1,16 +1,23 @@
-// タイ国旗
-function setup() {
+// EU
+function setup(){
   createCanvas(300, 200);
+  background(0,51,153);
+  for(let i = 0; i < 12; i++){
+    const theta = TWO_PI * i / 12;
+    const x = 150 + cos(theta) * 200/3;
+    const y = 100 + sin(theta) * 200/3;
+    fill(255,204,0);
+    noStroke();
+    star(x, y, 10);
+  }
 }
-
-function draw() {
- background(165,25,49);
- noStroke()
- fill(255);
- rect(0,0,300,500/3);
- fill(45,42,74);
- rect(0,200/3,300,200/3);
- fill(165,25,49);
- rect(0,0,300,100/3);
-
+function star(cx,cy,r){
+  beginShape();
+  for(var i=0; i<5; i++){
+    let theta=TWO_PI*i*2/5-HALF_PI;
+    let x=cx+cos(theta)*r;
+    let y=cy+sin(theta)*r;
+    vertex(x,y);
+  }
+  endShape(CLOSE);
 }
