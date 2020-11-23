@@ -41,8 +41,8 @@ function draw(){
 
 
 function mouseClicked(){
-  m= random(0,maxR);
-  l= random(0,maxR);
+  m= random(0,windowWidth);
+  l= random(0,windowHeight);
 }
 function cross(n){
   line(n,n,n+10,n+10)
