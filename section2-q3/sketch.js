@@ -2,10 +2,11 @@
 let cx, cy, maxR;
 
 function setup() {
-  let green = color(0, 255, 0);
-  let red = color(255, 0, 0);
+  let a = color(233, 233, 229);
+  let b = color(188, 226, 232);
   let black = color(0);
-  let cream = color(242, 212, 147);
+  let c = color(165, 154, 202);
+  let d = color(171,105,83)
   createCanvas(400, 400);
   background(255);
   stroke(255);
@@ -16,9 +17,14 @@ function setup() {
   maxR = min(width, height);
 
   drawCircle(black, maxR);
-  drawArcs(green, red, maxR * 0.8);
+  drawArcs(d, c, maxR * 0.85);
   // BLANK[1] (hint: drawArcs x 3, drawCircle x 1)
-  drawCircle(red, maxR * 0.05);
+  drawArcs(b,a,maxR*0.8)
+  drawArcs(d,c,maxR*0.5)
+  drawArcs(b,a,maxR*0.45)
+  drawCircle(d,maxR*0.1)
+  drawCircle(c, maxR * 0.05);
+
 }
 
 function drawCircle(c, r){
