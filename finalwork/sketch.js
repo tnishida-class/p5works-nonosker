@@ -4,8 +4,8 @@ let cx, cy, maxR,n,m;
 
 function setup() {
   createCanvas(windowWidth,windowHeight);
-   l= width / 2;
-   m= width / 2;
+   l= width ;
+   m= width ;
 }
 
 function draw(){
