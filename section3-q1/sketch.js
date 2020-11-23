@@ -4,15 +4,17 @@
 function setup(){
   createCanvas(400, 400);
   background(255);
-  balloon("I love keyakizaka46");
+  balloon("2020 was a weird year",50,20,255,179);
 }
 
-function balloon(t){
+function balloon(t,n,m,a,b){
   let w = textWidth(t);
   let h = textAscent() + textDescent();
   let p = 2;
-  fill(0);
-  rect(0, 0, w + p * 2, h + p * 2);
-  fill(255);
-  text(t, p, h + p);
+  fill(a,b,b);
+  noStroke();
+  rect(n, m, w+20, 2*h);
+  triangle(2*(n+w+20)/3,m+2*h,2*(n+w+20)/3+15,m+2*h,2*(n+w+20)/3+15,m+2*h+15);
+  fill(a)
+  text(t, n+10, m+h);
 }
